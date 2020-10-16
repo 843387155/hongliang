@@ -1,0 +1,378 @@
+body {
+    height: 100%;
+    min-width: 1024px;
+    font-size: 12px;
+    font-family: Microsoft Yahei,STHeiti,Simsun,STSong;
+    color: #333;
+    background-color: rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+.gray-customer-header {
+    height: 48px;
+}
+.topContent .gray-customer-header {
+    background: rgba(0,0,0,0.05);
+}
+.gray-customer-header .head_center {
+    width: auto;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    border: 0;
+    position: relative;
+    font-size: 0;
+}
+.gray-customer-header .head_center .main-logo {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    margin-top: 12px;
+}
+.head_center .main-logo {
+    position: static;
+}
+.head_center .main-logo {
+    left: 2px;
+    float: left;
+}
+.gray-customer-header .website-name {
+    font-size: 20px;
+    font-family: Microsoft Yahei,STHeiti,Simsun,STSong;
+    height: 48px;
+    line-height: 48px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+.website-name {
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    font-family: Microsoft Yahei,STHeiti,Simsun,STSong;
+    padding-top: 14px;
+}
+.gray-customer-header .head_center .main-logo img {
+    margin: 0;
+}
+.gray-customer-header .head_center img {
+    vertical-align: middle;
+    margin-top: 0;
+    float: none;
+    height: 24px;
+    width: 108px;
+}
+.gray-customer-header .split-line {
+    float: left;
+    width: 1px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    background: rgba(0,0,0,0.2);
+    margin: 14px 16px;
+}
+.gray-customer-header .adHeadTitle {
+    color: #191919;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    float: left;
+    line-height: 1;
+    margin-top: 16px;
+}
+/* 中间主体部分样式 */
+.hwid-root div{
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.hwid-root .hwid-fullpage-container{
+    text-align: center;
+    min-height: 700px;
+    position: relative;
+}
+.hwid-root .hwid-fullpage-container .title-header{
+    font-family: Microsoft Yahei,STHeiti,Simsun,STSong;
+    color: #191919;
+    text-align: center;
+    padding: 100px 0 80px;
+    font-size: 32px;
+    display: inline-block;
+    line-height: 1.3;
+}
+.qrcode{
+    display: inline-block;
+    width: 360px;
+    vertical-align: top;
+    margin-right: auto;
+    text-align: center;
+}
+.qrcode .qrcode-out{
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    padding: 20px;
+    background: #F7F7F7;
+    border-radius: 8px;
+}
+.qrcode .qrcode-call-word{
+    margin-top: 50px;
+    line-height: 22px;
+    color: #838383;
+}
+.qrcode .hwid-text-container{
+    text-align: left;
+    display: inline-block;
+    line-height: 1.3;
+    color: #838383;
+}
+.cut-off-rule{
+    background: rgba(0,0,0,0.1);
+    margin: 0 60px;
+    height: 300px;
+    display: inline-block;
+    width: 1px;
+    height: 300px;
+    vertical-align: top;
+}
+.information-entry{
+    text-align: left;
+    margin-top: 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 360px;
+}
+.information-entry .entry-login .hwid-login-id{
+    position: relative;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+.information-entry .entry-login .hwid-login-id .userAccount{
+    text-align: left;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.information-entry .entry-login .hwid-login-id .hwid-input{
+    padding: 0 16px;
+    /* border: 1px solid #007dff; */
+    border: none;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    outline: 0;
+    height: 48px;
+    line-height: 48px;
+    width: calc(100% - 32px);
+    font-size: 14px;
+    color: #191919;
+    caret-color: #007dff;
+
+}
+.information-entry .entry-login .hwid-login-pass{
+    position: relative;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-top: 26px;
+}
+.information-entry .entry-login .hwid-login-pass .userAccount{
+    text-align: left;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    max-width: 100%;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+.information-entry .entry-login .hwid-login-pass .hwid-input{
+    padding: 0 16px;
+    /* border: 1px solid #007dff; */
+    border: none;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    outline: 0;
+    height: 48px;
+    line-height: 48px;
+    width: calc(100% - 32px);
+    font-size: 14px;
+    color: #191919;
+    caret-color: #007dff;
+
+}
+.information-entry .entry-login .hwid-login-pass .pass-eyeoff{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    right: 0;
+    left: auto;
+    margin: 0 18px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-image: url(../images/pic_2004.svg);
+}
+.information-entry .entry-login .hwid-login-pass .pass-eyeon{
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    right: 0;
+    left: auto;
+    margin: 0 18px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-image: url(../images/pic_2009.png);
+}
+.entry-login .ver-code{
+    padding: 16px 0 0;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    color: #007dff;
+}
+.entry-login .ver-code:hover{
+    color: #0064cc;
+}
+.entry-login .hwid-login-btn{
+    text-align: center;
+}
+.entry-login .hwid-login-btn .button-box{
+    cursor: default!important;
+    display: block;
+    margin-top: 40px;
+    padding: 12px 30px;
+    background: #CA141D;
+    border: none;
+    border-radius: 8px;
+    opacity: .38;
+    width: auto;
+    min-width: 218px;
+    font-size: 18px;
+    line-height: 18px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.entry-login .hwid-login-btn{
+}
+.information-entry .entry-link{
+    padding-top: 40px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    font-size: 0;
+}
+.information-entry .entry-link .link-1{
+    padding: 0 15px;
+    position: relative;
+    line-height: 1.3;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    color: #007dff;
+    text-decoration: none;
+}
+ .link-con{
+    display: inline-block;
+    line-height: 1.3;
+}
+.link-primay::before{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 1px;
+    height: 16px;
+    left: 0;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+    clear: both;
+    padding-top: 3px;
+}
+.entry-login-list{
+    padding: 30px 0 40px;
+    text-align: center;
+}
+.entry-login-list span{
+    width: 40px;
+    height: 40px;
+    margin: 0 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: inline-block;
+}
+.entry-login-list .hwid-icon-third_qq{
+    background: url(../images/pic_2005.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+ .entry-login-list .hwid-icon-third_alipay{
+    background: url(../images/pic_2006.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+ .entry-login-list .hwid-icon-third_weixin{
+    background: url(../images/pic_2007.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+/* 底部样式 */
+
+.customer-footer .bottomAuto {
+    bottom: auto;
+}
+.customer-footer {
+    background: rgba(0,0,0,0.05);
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+}
+body, .customer-footer {
+    min-width: 1024px;
+}
+.ft {
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+.ft p {
+    display: inline-block;
+}
+.ft p:first-child {
+    display: block;
+}
+.ft p a {
+    font-size: 14px;
+    color: #000;
+    opacity: 1;
+}
+.foot_em {
+    font-size: 16px;
+    color: rgba(0,0,0,0.1);
+}
+.rule {
+    padding: 0 10px;
+}
