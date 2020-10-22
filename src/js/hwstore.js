@@ -202,3 +202,9 @@ function timeLeft(select,endTime,curTime = new Date()){
 var timer = setInterval(function(){//倒计时
 	timeLeft(".countdown",new Date("2020/10/30,20:00:00"));//第一个参数是选择器，第二个参数是结束时间，第三个参数默认为当下时间
 },1);
+
+
+console.log()
+$('.icon-minicart').eq(0).click(function(){
+    window.location.href = "./hwmyshop.html";
+})

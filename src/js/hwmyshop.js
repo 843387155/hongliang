@@ -5,7 +5,7 @@ var chex = '';
 showTbody();
 function showTbody(){
     $.ajax({
-        url:'http://localhost/cyrshop/src/php/showlist.php',
+        url:'../php/showlist.php',
         success:function(res){
             if(res.code){
                 var arr = res.data;
@@ -168,7 +168,7 @@ $('.youshangp').click(function(e){
     if((target.className=='add')||(target.className=='minus')){
         // 点击+增加一个商品数量,点击-减少一个商品数量
         $.ajax({
-            url:'http://localhost/cyrshop/src/php/updatewq.php',
+            url:'../php/updatewq.php',
             data:{
                 type:target.className,
                 code:$(target).parents('.sc-pro').attr('id')
@@ -185,7 +185,7 @@ $('.youshangp').click(function(e){
      }else if(target.className=='p-del'){
         // 点击删除按钮删除一个商品
         $.ajax({
-            url:'http://localhost/cyrshop/src/php/delwq.php',
+            url:'../php/delwq.php',
             data:{
                 code:$(target).parents('.sc-pro').attr('id')
             },

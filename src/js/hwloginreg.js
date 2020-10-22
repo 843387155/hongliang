@@ -119,7 +119,7 @@ mu.blur(function () {
 $('.hwid-sel').click(function(){
     
     $.ajax({
-        url:'http://localhost/cyrshop/src/php/regist.php',
+        url:'../php/regist.php',
         data:{
             area:$('.hwid-select-text').eq(0).text(),
             numb:$('.hwid-reg-detail').find('.hwid-input').eq(0).val(),
@@ -142,7 +142,7 @@ $('.hwid-sel').click(function(){
 $('.hwid-login-btn').click(function(){
     
     $.ajax({
-        url:'http://localhost/cyrshop/src/php/login.php',
+        url:'../php/login.php',
         data:{
             numb:$('.entry-login').find('.hwid-input').eq(0).val(),
             pass:$('.entry-login').find('.hwid-input').eq(1).val(),

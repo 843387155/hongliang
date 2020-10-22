@@ -18,7 +18,7 @@ $('.product-stock-btn').children().click(function(e){
 // 点击加入购物车弹出成功框
 $('.product-button01').click(function(){
     $.ajax({
-        url:'http://localhost/cyrshop/src/php/addwq.php',
+        url:'../php/addwq.php',
         data:{
             code:$('#pro-sku-code2').eq(0).text(),
             name:$('#pro-name').eq(0).text(),
