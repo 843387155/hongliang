@@ -3,31 +3,31 @@
     var liArr = $('div.hot-plate-mid>ul');
     liArr.ready(function(){
         var liHtml = '<li  style="background: url(\'../images/pic_1110.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: block; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/honor.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
         var liHtml = '<li  style="background: url(\'../images/pic_1111.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/hwsmh.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
         var liHtml = '<li  style="background: url(\'../images/pic_1112.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://www.vmall.com/product/10086557426930.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
         var liHtml = '<li  style="background: url(\'../images/pic_1113.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/pseries.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
         var liHtml = '<li  style="background: url(\'../images/pic_1114.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/honorhome.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
         var liHtml = '<li  style="background: url(\'../images/pic_1115.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/smarthome.html\" target=\"_blank\" ,2);\"></a></div>";
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
-        var liHtml = '<li  style="background: url(\'../images//pic_1116.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
-        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"https://sale.vmall.com/honor.html\" target=\"_blank\" ,2);\"></a></div>";
+        var liHtml = '<li  style="background: url(\'../images/pic_1116.jpg\') 50% 0px no-repeat; ; width: 100%; height: 550px; display: none; position: absolute;">'
+        liHtml += "<div style=\"width:100%;\"><a style=\"width:100%;height:550px;display:block;\" href=\"hwshop.html\" target=\"_blank\" ,2);\"></a></div>";
         liHtml += '</li>';
         $('div.hot-plate-mid>ul').append(liHtml);
     });
@@ -50,7 +50,6 @@
     
     function move() {
         index++;
-        console.log(index);
         if (index==7){
             index=0
         }
@@ -70,12 +69,12 @@
     };
     var time=setInterval(move,5000);
     $(".widget-next").click(function () {
+        clearInterval(time);
         move();
     });
     /*点击左侧按钮时执行*/
     function moveL() {
         index--;
-        console.log(index);
         if (index==-1){
             index=6
         }
@@ -94,6 +93,7 @@
         .fadeOut(300);
     }
     $(".widget-prev").click(function () {
+        clearInterval(time);
         moveL();
     });
     $(".hot-plate").hover(function () {
@@ -154,3 +154,51 @@
     $('.hungBar-top').click(function(){
         $('html,body').animate({scrollTop:0},500);
     });
+
+
+// 使用ajax调用json渲染列表
+
+    $.ajax({
+        url:'./data.json',
+        dataType:'json',
+        success:function(data){
+            $.each(data,function(i,item){
+                $('.category-list').append(` <li class="category-item">
+                <div class="category-item-bg">
+                    <div class="category-info">
+                        <a href="#">
+                            <span>${item.text}</span>
+                        </a>
+                        <i></i>
+                    </div>
+                </div>
+            </li>`);
+            })
+        }
+    })
+
+
+// 华为闪购
+function doublenum(n){
+    if(n < 10){
+        return "0" + n;
+    }else{
+        return n;
+    }
+}
+function timeLeft(select,endTime,curTime = new Date()){
+   
+	var leftTime = endTime - curTime;//时间差
+	if(leftTime <= 0){//如果时间差小于等于0
+		clearInterval(timer);//清除定时器
+	}else{
+		var hours =doublenum(Math.floor(leftTime/(1000*60*60)%24)) ;//时
+		var mi =doublenum(Math.floor(leftTime/(1000*60)%60)) ;//分
+		var se =doublenum(Math.floor(leftTime/1000%60)) ;//秒
+		$(select).html('<span>'+hours+'</span>'+"<i>:</i>"+'<span>'+mi+'</span>'+"<i>:</i>"+'<span>'+se+'</span>');
+	}
+}
+	
+var timer = setInterval(function(){//倒计时
+	timeLeft(".countdown",new Date("2020/10/30,20:00:00"));//第一个参数是选择器，第二个参数是结束时间，第三个参数默认为当下时间
+},1);

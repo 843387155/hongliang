@@ -171,6 +171,7 @@ p {
 }
 
 /* 右边nav */
+
 .top-nav .dropdown a:hover {
     color: #cb242b;
 }
@@ -395,6 +396,7 @@ p {
     left: -3px;
     line-height: 12px;
 }
+
 /* 头部样式 */
 .fr, .right, .right-area {
     float: right;
@@ -447,6 +449,7 @@ p {
     color: #cb242b;
 }
 /* 右边部分样式 */
+
 .search-bar {
     margin-top: 5px;
     background: #fff;
@@ -589,6 +592,18 @@ p {
     right: 15px;
     z-index: 3;
     margin-top: -8px;
+}
+.category .category-item:hover:first-child .category-item-bg {
+    border-radius: 10px 0 0 0;
+}
+.category .category-item:hover:last-child .category-item-bg {
+    border-radius: 0 0 0 10px;
+}
+.category .category-item:hover .category-item-bg {
+    background: #fff;
+    box-shadow: 0 0 28px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
 }
 /* 热门板样式 */
 .hot-plate{
@@ -1266,3 +1281,213 @@ p {
     background: url(../images/pic_001.svg) no-repeat;
 }
 
+/* 华为闪购 */
+.home-flashsale{
+    position: relative;
+}
+.row {
+    margin-left: -14px;
+}
+.row:after, .row:before {
+    content: " ";
+    display: table;
+}
+.home-flashsale .rainbow-item-4 {
+    border-top-color: #e53935;
+}
+.home-flashsale .flashsale-countdown {
+    height: 300px;
+    padding-top: 39px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+.home-flashsale .flashsale-countdown img {
+    margin: 25px auto;
+}
+.span4 {
+    width: 234px;
+    float: left;
+    margin-left: 14px;
+    min-height: 1px;
+}
+.home-flashsale .flashsale-countdown .round {
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 15px;
+}
+.home-flashsale .flashsale-countdown .desc {
+    color: rgba(0,0,0,.54);
+    font-size: 15px;
+}
+.home-flashsale .flashsale-countdown .countdown {
+    width: 168px;
+    margin: 28px auto 0;
+}
+.home-flashsale .flashsale-countdown .countdown span {
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+}
+.home-flashsale .flashsale-countdown .countdown i {
+    width: 15px;
+    float: left;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    font-style: normal;
+}
+.home-flashsale .swiper-controls {
+    position: absolute;
+    right: 0;
+    top: 24px;
+}
+.home-flashsale .swiper-flashsale-next, .home-flashsale .swiper-flashsale-prev {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    padding: 3px 5px;
+    margin-left: -1px;
+    border: 1px solid #e0e0e0;
+    font-size: 20px;
+    line-height: 20px;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+    color: #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+}
+.swiper-controls .iconfont-arrow-right-big{
+ position: absolute;
+ background: url(../images/pic_8010.png) -362px -1314px;
+ width: 10px;
+    height: 20px;
+}
+.swiper-controls .iconfont-arrow-left-big{
+    position: absolute;
+    background: url(../images/pic_8010.png) -352px -1314px;
+        width: 10px;
+       height: 20px;
+}
+.home-flashsale .flashsale-list {
+    float: right;
+}
+.span16 {
+    width: 956px;
+    margin-left: 14px;
+    min-height: 1px;
+}
+.swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+}
+.home-flashsale .flashsale-list ul {
+    margin: 0;
+    padding: 0;
+    height: 340px;
+}
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform,-webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.layout .swiper-wrapper .flashsale-countup .grid-img img {
+    width: 150px;
+    height: 150px;
+}
+.home-flashsale .flashsale-countup {
+    height: 300px;
+    width: 230px;
+    padding-top: 39px;
+    border-top-width: 1px;
+    margin-left: 12px;
+    border-top-style: solid;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+.home-flashsale .flashsale-countup .grid-title{
+    width: 210px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 12px;
+    height: 21px;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.flashsale-countup .grid-title {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 16px 20px 2px;
+    overflow: hidden;
+    color: #3a3a3a;
+    height: 40px;
+    display: table-cell;
+    vertical-align: bottom;
+    width: 259px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 26px;
+}
+.home-flashsale .flashsale-countup .grid-desc {
+    margin: 0;
+    line-height: 24px;
+}
+.home-flashsale .flashsale-countup .grid-desc {
+    color: #777;
+    line-height: 18px;
+    padding: 0 10px;
+    margin: 2px 20px 7px;
+}
+.flashsale-countup .grid-desc {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 2px 20px 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #a4a4a4;
+}
+.home-flashsale .flashsale-countup .grid-price {
+    margin: 0;
+    line-height: 28px;
+}
+.home-flashsale .flashsale-countup .grid-price {
+    color: #cc0e11;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+.flashsale-countup .grid-price {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 20px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #cc0e11;
+}

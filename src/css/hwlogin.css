@@ -89,9 +89,14 @@ body {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 }
-.hwid-root .hwid-fullpage-container{
-    text-align: center;
+.hwid-root .hwid-login-root.hwid-fullpage-container{
+    background: #fff;
     min-height: 700px;
+    width: 100%;
+}
+.hwid-root .hwid-login-root .hwid-fullpage-container{
+    text-align: center;
+    min-height: 600px;
     position: relative;
 }
 .hwid-root .hwid-fullpage-container .title-header{
@@ -109,6 +114,7 @@ body {
     vertical-align: top;
     margin-right: auto;
     text-align: center;
+    position: relative;
 }
 .qrcode .qrcode-out{
     display: inline-block;
@@ -128,6 +134,7 @@ body {
     display: inline-block;
     line-height: 1.3;
     color: #838383;
+    font-size: 12px;
 }
 .cut-off-rule{
     background: rgba(0,0,0,0.1);
@@ -189,6 +196,12 @@ body {
     word-wrap: break-word;
     word-break: break-word;
 }
+.information-entry .entry-login .hwid-login-pass.hwid-input-container-focus{
+    border: 1px solid #007dff;
+}
+.information-entry .entry-login .hwid-login-id.hwid-input-container-focus{
+    border: 1px solid #007dff;
+}
 .information-entry .entry-login .hwid-login-pass .hwid-input{
     padding: 0 16px;
     /* border: 1px solid #007dff; */
@@ -202,14 +215,14 @@ body {
     font-size: 14px;
     color: #191919;
     caret-color: #007dff;
-
 }
+
 .information-entry .entry-login .hwid-login-pass .pass-eyeoff{
     height: 24px;
     width: 24px;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     right: 0;
     left: auto;
     margin: 0 18px 0 0;
@@ -223,7 +236,7 @@ body {
     width: 24px;
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     right: 0;
     left: auto;
     margin: 0 18px 0 0;
@@ -253,7 +266,6 @@ body {
     background: #CA141D;
     border: none;
     border-radius: 8px;
-    opacity: .38;
     width: auto;
     min-width: 218px;
     font-size: 18px;
@@ -262,7 +274,12 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 }
-.entry-login .hwid-login-btn{
+.entry-login .hwid-login-btn .button-boxaction{
+    opacity: .38;
+}
+.entry-login .hwid-login-btn .button-box span{
+    display: inline-block;
+    line-height: 1.3;
 }
 .information-entry .entry-link{
     padding-top: 40px;
@@ -288,6 +305,9 @@ body {
     color: #007dff;
     text-decoration: none;
 }
+.information-entry .entry-link .link-1:hover{
+    color: #0064cc;
+}
  .link-con{
     display: inline-block;
     line-height: 1.3;
@@ -305,7 +325,7 @@ body {
     clear: both;
     padding-top: 3px;
 }
-.entry-login-list{
+.information-entry .entry-login-list{
     padding: 30px 0 40px;
     text-align: center;
 }
@@ -322,8 +342,18 @@ body {
     background-position: 50%;
     background-size: contain;
 }
+.entry-login-list .hwid-icon-third_qq:hover{
+    background: url(../images/pic_2009.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
  .entry-login-list .hwid-icon-third_alipay{
     background: url(../images/pic_2006.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+.entry-login-list .hwid-icon-third_alipay:hover{
+    background: url(../images/pic_2010.svg) no-repeat;
     background-position: 50%;
     background-size: contain;
 }
@@ -332,10 +362,17 @@ body {
     background-position: 50%;
     background-size: contain;
 }
+.entry-login-list .hwid-icon-third_weixin:hover{
+    background: url(../images/pic_2011.svg) no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
 /* 底部样式 */
-
-.customer-footer .bottomAuto {
-    bottom: auto;
+body,.customer-footer {
+    min-width: 1024px;
+}
+.topContent .customer-footer.bottomAuto{
+    bottom:auto;
 }
 .customer-footer {
     background: rgba(0,0,0,0.05);
@@ -345,9 +382,7 @@ body {
     width: 100%;
     height: 110px;
 }
-body, .customer-footer {
-    min-width: 1024px;
-}
+
 .ft {
     height: 100%;
     margin: auto;
