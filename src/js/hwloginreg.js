@@ -1,11 +1,32 @@
+
 $(".hwid-input-container").focusin(function() {
     $(this).addClass('hwid-input-container-focus');
-    
 });
 $(".hwid-input-container").focusout(function() {
     $(this).removeClass('hwid-input-container-focus');
-    
+    // var mobilereg = /^1[3456789]\d{9}$/; // 1[356789][0-9] （后面再接8位数）
+    // if (!$('.hwid-reg-detail').find('.hwid-input').eq(0).val()) {
+    //     $(this).removeClass('hwid-input-container-focus');
+    //     $(this).removeClass('hwid-input-container-error');
+    //     return;
+    // } else if (!mobilereg.test($('.hwid-reg-detail').find('.hwid-input').eq(0).val())) {
+    //     $(this).removeClass('hwid-input-container-focus');
+    //     $(this).addClass('hwid-input-container-error');
+    //     return;
+    // }
 });
+$('.hwid-input').bind('input propertychange', function(){
+    var hwip1 = $('.hwid-input').eq(0).val();
+    console.log(hwip1)
+    var mob = /^1[3456789]\d{9}$/; 
+     if(!hwip1){
+        return;
+     }else if(!mob.test(hwip1)){
+        $(".hwid-input-container").addClass('hwid-input-container-error');
+     }
+})
+
+
 
 $(".hwid-login-id").focusin(function() {
     $(this).addClass('hwid-input-container-focus');
@@ -109,15 +130,9 @@ input.bind('input propertychange',function(){
     
 });
 
-var mu = $('.hwid-reg-detail').find('.hwid-input').eq(0);
-mu.blur(function () {
-    var name1 = $('.hwid-reg-detail').find('.hwid-input').eq(0).val();
-    var regName = /^[a-z0-9_-]{3,16}$/;
 
-})
 // regist获取前端数据存入数据库
 $('.hwid-sel').click(function(){
-    
     $.ajax({
         url:'../php/regist.php',
         data:{
@@ -132,15 +147,18 @@ $('.hwid-sel').click(function(){
                 location.href="./hwlogin.html"
             }    
         },
+        error:function(res){
+            alert('请填写正确的手机号码');
+        },
         dataType:'json'
     })
+    
 })
 
 
 
 //login获取前端数据存入数据库
 $('.hwid-login-btn').click(function(){
-    
     $.ajax({
         url:'../php/login.php',
         data:{

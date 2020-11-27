@@ -98,8 +98,8 @@
     });
     $(".hot-plate").hover(function () {
         clearInterval(time);
-    },
-    function () {
+    },function () {
+        clearInterval(time);
         time=setInterval(move,5000);
     });
 

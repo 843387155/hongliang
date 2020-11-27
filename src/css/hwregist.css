@@ -208,6 +208,9 @@ body {
     width: 100%;
     position: relative;
 }
+.hwid-input-container.hwid-input-container-error[data-v-6b1148af] {
+    border: 1px solid #fa2a2d;
+}
 .hwid-input-container .input-left[data-v-6b1148af] {
     border-right: 0;
     float: left;
@@ -337,6 +340,26 @@ body {
     -webkit-box-align: start;
     -ms-flex-align: center;
     align-items: flex-start;
+}
+.hwid-root .hwid-input-msg-error .errorDiv .ic-tips {
+    margin-right: 4px;
+    margin-left: 0;
+}
+.hwid-root .hwid-input-msg-error .errorDiv .ic-tips {
+    background-image: url(../images/pic_0008.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 3px;
+}
+.hwid-root .hwid-input-msg-error .errorDiv span {
+    width: calc(100% - 18px);
+    line-height: 1.4;
+    display: inline-block;
+}
+.hwid-root .hwid-input-msg-error .errorDiv .ic-tips {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 }
 .hwid-root .hwid-pipe {
     left: 8px;

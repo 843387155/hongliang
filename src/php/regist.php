@@ -1,11 +1,23 @@
 <?php
 require('./model/_connect.php');
+
+
 //获取前端的参数
 $area = $_REQUEST['area'];//用户地区area
 $numb = $_REQUEST['numb'];//用户手机号numb
 $code = $_REQUEST['code'];//用户验证码code
 $pass = $_REQUEST['pass'];//用户密码pass
 $data = $_REQUEST['data'];//用户出生日期data
+
+//上面部分判断长度是不是11位
+// if (strlen($numb) == "11") {
+//   /*接下来的正则表达式以1开头随后跟着任意的9为数字*/
+//   if (!preg_match("/^1[3456789]\d{9}$/", $numb)) {
+// 	echo json_encode(array("code"=>0));
+//   }   
+// } else {
+// 	echo json_encode(array("code"=>0));
+// }
 //根据前端参数插入数据
 $sql = "SELECT * FROM `user` WHERE `user_number`='$numb'";
 $res = mysqli_query($conn,$sql);
